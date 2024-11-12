@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="ipm_helpdesk.list">
+      <field name="name">ipm_helpdesk list</field>
+      <field name="model">ipm_helpdesk.ipm_helpdesk</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="ipm_helpdesk.action_window">
+      <field name="name">ipm_helpdesk window</field>
+      <field name="res_model">ipm_helpdesk.ipm_helpdesk</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="ipm_helpdesk.action_server">
+      <field name="name">ipm_helpdesk server</field>
+      <field name="model_id" ref="model_ipm_helpdesk_ipm_helpdesk"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="ipm_helpdesk" id="ipm_helpdesk.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="ipm_helpdesk.menu_1" parent="ipm_helpdesk.menu_root"/>
+    <menuitem name="Menu 2" id="ipm_helpdesk.menu_2" parent="ipm_helpdesk.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="ipm_helpdesk.menu_1_list" parent="ipm_helpdesk.menu_1"
+              action="ipm_helpdesk.action_window"/>
+    <menuitem name="Server to list" id="ipm_helpdesk" parent="ipm_helpdesk.menu_2"
+              action="ipm_helpdesk.action_server"/>
+-->
+  </data>
+</odoo>

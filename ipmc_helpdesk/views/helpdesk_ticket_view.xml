@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="helpdesk_ticket_view_form" model="ir.ui.view">
+        <field name="name">helpdesk_ticket form</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="arch" type="xml">
+
+            <field name="oolweh_mualamah_priority" position="replace">
+                <field name="mualamah"/>
+            </field>
+            <field name="mualamah" position="replace">
+                <field name="oolweh_mualamah_priority" attrs="{'readonly': [('stage_readonly', '=', True)]}"/>
+            </field>
+
+        </field>
+    </record>
+</odoo>
